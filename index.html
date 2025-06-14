@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metro Route Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- header.html -->
+  <header class="header">
+    <div class="logo-container">
+      <img class="icons" src="images/subway_2055265.png" alt="Metro Logo" class="logo-icon">
+    <a class="logo" >GOMETRO</a>
+    </div>
+    <div class="nav-icons">
+      <a href="#map-section"><img class="icons"  src="images/placeholder_331795.png" alt="map Icon"></a>
+      <img class="icons" src="images/icons8-menu.svg" alt="Menu Icon">
+    </div>
+  </header>
+  <!-- hero section -->
+  <section class="hero">
+    <img src="images/metro-img-2.jpg" alt="Metro Train" class="hero-image">
+    
+    <div class="hero-text">
+      <h1>🚇 Select Stations To Find Delhi Metro Route</h1>
+    
+      <h2></h2>
+      <label for="source">Select Source Station:</label>
+      <select id="source"></select>
+
+      <label for="destination">Select Destination Station:</label>
+      <select id="destination"></select>
+
+      <a href="#result_section"><button onclick="findRoute()">Find Route</button></a>
+
+    </div>
+  </section>
+  <!-- script to populate source and destination dropdowns -->
+<!-- network section -->
+  <section id="result_section" class="network-section">
+      <div id="result" ></div>
+  <div class="network-grid">
+      <!-- Delhi Metro Network Details -->
+      <div class="network-info">
+        <h2 class="section-title">Delhi Metro Network</h2>
+        <p id="network-para"><strong>Operated by:</strong><cite> Delhi Metro Rail Corporation (DMRC)</cite></p><br>
+        <div class="info-grid">
+          <div class="info-card">
+            <p><strong>Metro Timings</strong><br>05:00 AM / 11:30 PM</p>
+          </div>
+          <div class="info-card">
+            <p><strong>Helpline No.</strong><br>155370 / 011-155370</p>
+          </div>
+          <div class="info-card">
+            <p><strong>Total Stations</strong><br>232 Active / 87 Inactive</p>
+          </div>
+          <div class="info-card">
+            <p><strong>Total Lines</strong><br>12 Active / 2 Inactive</p>
+          </div>
+          <div class="info-card">
+            <p><strong>Train Length</strong><br>4 / 6 / 8 Train Coaches</p>
+          </div>
+          <div class="info-card">
+            <p><strong>Operation Started</strong><br>24 December 2002</p>
+          </div>
+        </div>
+      </div>
+      <!-- Delhi Metro Network Map 2025 -->
+      <section id="map-section">
+        <div class="network-map">
+        <h2 class="section-title">Delhi Metro Network Map 2025</h2>
+        <img src="images/delhi-metro-route-map.jpg" alt="Delhi Metro Network Map 2025" class="map-image">
+      </div></section>
+  </div>
+</section>
+  <!-- facts and rules section -->
+  <section class="facts-section">
+    <h2>Interesting Facts about Indian Metro Rails</h2>
+    <div class="facts-grid">
+      <div><strong>Kolkata Metro:</strong> First metro in India. It is the first in India to have the third rail for
+        power supply and the first to use fully metro coaches made in India by ICF & BEML.</div>
+      <div><strong>Delhi Metro:</strong> India's largest rapid transit/metro system with a network of about 389 Km and
+        285 stations.</div>
+      <div><strong>Rapid Metro Gurgaon:</strong> India's first fully privately financed metro, now operated by Delhi
+        Metro.</div>
+      <div><strong>Noida Metro:</strong> Currently operated under Delhi Metro, contracted for one year.</div>
+      <div><strong>Namma Metro:</strong> First metro in southern India with third rail power supply and onboard Wi-Fi.
+      </div>
+      <div><strong>Mumbai Metro:</strong> India's first public private partnership (PPP) metro system with Reliance
+        group.</div>
+      <div><strong>Jaipur Metro:</strong> First double-story elevated road and metro track project in India.</div>
+      <div><strong>Chennai Metro:</strong> First metro to connect two lines through a loop line and first with
+        underground stations with sliding doors.</div>
+      <div><strong>Kochi Metro:</strong> First Indian metro to use CBTC signaling.</div>
+      <div><strong>Lucknow Metro:</strong> Fastest built and commissioned metro system in the world.</div>
+      <div><strong>Hyderabad Metro:</strong> First Indian metro with CBTC and driverless operation capabilities.</div>
+      <div><strong>Ahmedabad Metro:</strong> First metro in India to use a fully elevated corridor.</div>
+      <div><strong>Indore Metro:</strong> First metro in Madhya Pradesh, with a unique design for elevated stations.
+      </div>
+      <div><strong>Patna Metro:</strong> First metro in Bihar, with a unique design for elevated stations.</div>
+      <div><strong>Thane Metro:</strong> First metro in Maharashtra to use a fully elevated corridor.</div>
+      <div><strong>Kanpur Metro:</strong> First metro in Uttar Pradesh, with a unique design for elevated stations.
+      </div>
+      <div><strong>Gurgaon Metro:</strong> First metro in Haryana, with a unique design for elevated stations.</div>
+      <div><strong>Delhi Airport Express:</strong> First metro in India to have a dedicated airport express line.</div>
+      <div><strong>Delhi Metro Phase IV:</strong> First metro in India to have a fully automated operation system.</div>
+      <div><strong>Delhi Metro Phase III:</strong> First metro in India to have a fully automated operation system.
+      </div>
+      <div><strong>Delhi Metro Phase II:</strong> First metro in India to have a fully automated operation system.</div>
+      <div><strong>Delhi Metro Phase I:</strong> First metro in India to have a fully automated operation system.</div>
+
+    </div>
+  </section>
+  <!-- rules section -->
+  <section class="rules-section">
+    <h2>Do's & Don'ts While Traveling by Metro</h2>
+    <div class="rules-list">
+      <div>Keep behind the yellow line before boarding.</div>
+      <div>Maintain distance from doors to allow others to board.</div>
+      <div>Follow instructions from station staff.</div>
+      <div>Be careful with loose items like Saree, Dupatta, Dhoti, and bags.</div>
+      <div>Take care of your belongings while traveling or waiting.</div>
+      <div>Press the Passenger Emergency Alarm if any passenger/article is stuck in doors.</div>
+      <div>Keep an eye on children & infants while traveling.</div>
+      <div>Do not push while boarding or de-boarding.</div>
+      <div>Do not make noise or play music openly.</div>
+      <div>If issues arise, contact metro security instead of fighting.</div>
+      <div>Do not attempt to enter/exit while doors are closing.</div>
+      <div>Do not obstruct door closure.</div>
+      <div>Show smart card or token at entry/exit gates.</div>
+      <div>Smart card use gives 10% discount on travel fee.</div>
+      <div>Ensure proper entry/exit to avoid penalties.</div>
+      <div>Carrying token beyond exit is a punishable offence.</div>
+      <div>Unused tokens must be refunded within 60 minutes from the purchase station.</div>
+    </div>
+  </section>
+  <!-- footer.html -->
+  <footer class="custom-footer">
+    <div class="footer-logo">
+      <div>
+        <img class="icons" src="images/subway_2055265.png" alt="metro-icon">
+        <a class="logo">GOMETRO</a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <a href="#map-section">Maps</a>
+      <a href="#">Guides</a>
+      <a href="#">News</a>
+      <a href="#">Attractions</a>
+      <a href="#">DTC</a>
+    </div>
+
+    <div class="icons, footer-social">
+      <a href="https://www.facebook.com"><img src="images/icons8-facebook.svg" alt="Facebook"></a>
+      <a href="https://www.instagram.com"><img src="images/icons8-instagram.svg" alt="Instagram"></a>
+      <a href="https://www.youtube.com"><img src="images/icons8-youtube-48.svg" alt="YouTube"></a>
+      <a href="https://www.x.com"><img src="images/icons8-twitter.svg" alt="X/Twitter"></a>
+    </div>
+
+    <hr>
+    <p class="footer-note">Note: We are not affiliated with any official network.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
