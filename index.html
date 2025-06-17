@@ -13,20 +13,34 @@
   <header class="header">
     <div class="logo-container">
       <img class="icons" src="images/subway_2055265.png" alt="Metro Logo" class="logo-icon">
-    <a class="logo" >GOMETRO</a>
+      <a class="logo">GOMETRO</a>
     </div>
     <div class="nav-icons">
-      <a href="#map-section"><img class="icons"  src="images/placeholder_331795.png" alt="map Icon"></a>
-      <img class="icons" src="images/icons8-menu.svg" alt="Menu Icon">
+      <a href="#map-section"><img class="icons" src="images/placeholder_331795.png" alt="map Icon"></a>
+      <img class="icons" src="images/icons8-menu.svg" alt="Menu Icon" id="menu-toggle" onclick="toggleMenu()">
+
     </div>
   </header>
+<!-- Dropdown Menu (Popup Box) -->
+<nav id="collapsible-menu" class="menu-popup">
+  <ul>
+    <li><a href="#hero" onclick="closeMenu()">Home</a></li>
+    <li><a href="#result_section" onclick="closeMenu()">Find Route</a></li>
+    <li><a href="#map-section" onclick="closeMenu()">Map</a></li>
+    <li><a href="#facts-section" onclick="closeMenu()">Facts</a></li>
+    <li><a href="#rules-section" onclick="closeMenu()">Rules</a></li>
+    <li><a href="#footer" onclick="closeMenu()">Contact</a></li>
+  </ul>
+</nav>
+
+
   <!-- hero section -->
   <section class="hero">
     <img src="images/metro-img-2.jpg" alt="Metro Train" class="hero-image">
-    
+
     <div class="hero-text">
       <h1>🚇 Select Stations To Find Delhi Metro Route</h1>
-    
+
       <h2></h2>
       <label for="source">Select Source Station:</label>
       <select id="source"></select>
@@ -39,10 +53,10 @@
     </div>
   </section>
   <!-- script to populate source and destination dropdowns -->
-<!-- network section -->
+  <!-- network section -->
   <section id="result_section" class="network-section">
-      <div id="result" ></div>
-  <div class="network-grid">
+    <div id="result"></div>
+    <div class="network-grid">
       <!-- Delhi Metro Network Details -->
       <div class="network-info">
         <h2 class="section-title">Delhi Metro Network</h2>
@@ -71,11 +85,12 @@
       <!-- Delhi Metro Network Map 2025 -->
       <section id="map-section">
         <div class="network-map">
-        <h2 class="section-title">Delhi Metro Network Map 2025</h2>
-        <img src="images/delhi-metro-route-map.jpg" alt="Delhi Metro Network Map 2025" class="map-image">
-      </div></section>
-  </div>
-</section>
+          <h2 class="section-title">Delhi Metro Network Map 2025</h2>
+          <img src="images/delhi-metro-route-map.jpg" alt="Delhi Metro Network Map 2025" class="map-image">
+        </div>
+      </section>
+    </div>
+  </section>
   <!-- facts and rules section -->
   <section class="facts-section">
     <h2>Interesting Facts about Indian Metro Rails</h2>

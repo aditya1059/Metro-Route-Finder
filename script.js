@@ -131,6 +131,27 @@ function findRoute() {
   `;
 }
 
+function toggleMenu() {
+  const menu = document.getElementById('collapsible-menu');
+  menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+}
+
+function closeMenu() {
+  document.getElementById('collapsible-menu').style.display = 'none';
+}
+
+// Auto-close if clicking outside
+document.addEventListener('click', function(event) {
+  const menu = document.getElementById('collapsible-menu');
+  const toggle = document.getElementById('menu-toggle');
+  if (!menu.contains(event.target) && event.target !== toggle) {
+    menu.style.display = 'none';
+  }
+});
+
+
+
+
 
 
 
