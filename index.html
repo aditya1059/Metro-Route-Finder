@@ -24,8 +24,8 @@
 <!-- Dropdown Menu -->
 <nav id="collapsible-menu" class="menu-popup">
   <ul>
-    <li><a href="#hero" onclick="closeMenu()">Home</a></li>
-    <li><a href="#result_section" onclick="closeMenu()">Find Route</a></li>
+    <li><a href="index.html" onclick="closeMenu()">Home</a></li>
+    <li><a href="#hero" onclick="closeMenu()">Find Route</a></li>
     <li><a href="#map-section" onclick="closeMenu()">Map</a></li>
     <li><a href="#facts-section" onclick="closeMenu()">Facts</a></li>
     <li><a href="#rules-section" onclick="closeMenu()">Rules</a></li>
@@ -35,7 +35,7 @@
 
 
   <!-- hero section -->
-  <section class="hero">
+  <section id="hero" class="hero">
     <img src="images/metro-img-2.jpg" alt="Metro Train" class="hero-image">
 
     <div class="hero-text">
@@ -48,13 +48,17 @@
       <label for="destination">Select Destination Station:</label>
       <select id="destination"></select>
 
-      <a href="#result_section"><button onclick="findRoute()">Find Route</button></a>
+      <a href="#result-section"><button onclick="findRoute()">Find Route</button></a>
 
     </div>
   </section>
  
   <!-- network section -->
-  <section id="result_section" class="network-section">
+  <section id="result-section" class="network-section">
+    <p><strong>Note:</strong> Some stations are not yet connected in our current metro map
+       data. If no route appears for certain station pairs, it may be because those paths are 
+       still being added. We're actively working to complete the map. Thank you for your 
+       patience!</p>
     <div id="result"></div>
     <div class="network-grid">
       <!-- Delhi Metro Network Details -->
@@ -92,7 +96,7 @@
     </div>
   </section>
   <!-- facts and rules section -->
-  <section class="facts-section">
+  <section id="facts-section" class="facts-section">
     <h2>Interesting Facts about Indian Metro Rails</h2>
     <div class="facts-grid">
       <div><strong>Kolkata Metro:</strong> First metro in India. It is the first in India to have the third rail for
@@ -130,7 +134,7 @@
     </div>
   </section>
   <!-- rules section -->
-  <section class="rules-section">
+  <section id="rules-section" class="rules-section">
     <h2>Do's & Don'ts While Traveling by Metro</h2>
     <div class="rules-list">
       <div>Keep behind the yellow line before boarding.</div>
@@ -153,7 +157,7 @@
     </div>
   </section>
   <!-- footer.html -->
-  <footer class="custom-footer">
+  <footer id="footer" class="custom-footer">
     <div class="footer-logo">
       <div>
         <img class="icons" src="images/subway_2055265.png" alt="metro-icon">
